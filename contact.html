@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Savanna Grill</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="nav">
+  <div class="logo">LUNKUSE <span>PRECIOUS</span></div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about us.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a class="active" href="contact.html">Contact</a>
+  </nav>
+</div></header>
+
+<div class="page-title"><h1>Contact | Savanna Grill</h1></div>
+
+<section>
+    <h2>Booking &amp; Reservations</h2>
+  <div class="contact-info">
+    <p><b><span style="color:green">Location:</span></b> Precious building, Block 12, Kampala- Uganda</p><br>
+    <p><b><span style="color:green">Email:</span> </b>savannagrill@gmail.com</p><br>
+    
+    <p><b><span style="color:green">Call us</span></b> +256 702345610 (office hrs) or +256756503122(available on watsap 24/7)
+    
+  </div>
+  <form id="bookingForm">
+    <input type="text" id="name" placeholder="Your name" required>
+    <input type="email" id="email" placeholder="Your email" required>
+    <input type="date" placeholder="Date" required onclick="this.showPicker()">
+    
+    <textarea id="message" rows="4" placeholder="Time and number of guests" required></textarea>
+    <button class="btn" type="submit">Send Request</button>
+    <p id="msg"></p>
+  </form>
+</section>
+<section>
+    <h2>Your Review</h2>
+    <center>
+    <p>We would be grateful if you give us your honest review and dining experience, it helps us serve you better.</p>
+    </center>
+<label><b><span style="color:green">Your Full Name</span></b></label>
+<input type="text" placeholder="Enter your full name" required><br><br>
+
+<label><b><span style="color:green">Please Rate Your Dining Experience.</span></b></label><br>
+<div class="stars">
+  <input type="radio" name="rating" id="star5" value="5" required>
+  <label for="star5">★</label>
+  <input type="radio" name="rating" id="star4" value="4">
+  <label for="star4">★</label>
+  <input type="radio" name="rating" id="star3" value="3">
+  <label for="star3">★</label>
+  <input type="radio" name="rating" id="star2" value="2">
+  <label for="star2">★</label>
+  <input type="radio" name="rating" id="star1" value="1">
+  <label for="star1">★</label>
+</div>
+<p>1 - Poor &nbsp; 5 - Excellent</p>
+<b><span style="color:green">
+<label>Your Review</label><br></span></b>
+<textarea placeholder="Please tell us about the food, service and atmosphere..." required></textarea><br><br>
+
+<button class="btn" type="submit">Submit Review</button>
+</section>
+<footer>BACS/26D/U/A0477</footer>
+
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("name").value;
+    document.getElementById("msg").textContent = "Thank you, " + name + "! We will contact you soon.";
+    this.reset();
+  });
+</script>
+</body>
+</html>
